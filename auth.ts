@@ -7,8 +7,8 @@ const config = {
   theme: { logo: "https://authjs.dev/img/logo-sm.png" },
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_ID!,
-      clientSecret: process.env.GOOGLE_SECRET!,
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
     }),
   ],
   basePath: "/auth",

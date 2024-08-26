@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import SignInButton from "@/components/SignInButton";
 import { auth } from "auth";
 
 export default async function Home() {
@@ -6,6 +6,7 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-slate-300">
+
       <h2 className="font-normal text-3xl">
       Lit Dapp
     </h2>
@@ -20,8 +21,7 @@ export default async function Home() {
         </div>
 
         <div>
-
-          <Button>Click me</Button>
+          <SignInButton />
         </div>
       </main>
   );
