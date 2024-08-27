@@ -16,8 +16,6 @@ export default function useAuthenticate(redirectUri?: string) {
     setError(undefined);
     setAuthMethod(undefined);
 
-    console.log("AuthWithGoogle: ", redirectUri);
-
     try {
       const result: AuthMethod = (await authenticateWithGoogle(
         redirectUri as any
