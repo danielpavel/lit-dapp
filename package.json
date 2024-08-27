@@ -9,8 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@lit-protocol/auth-browser": "^6.4.8",
-    "@lit-protocol/lit-node-client": "^6.4.8",
+    "@lit-protocol/auth-helpers": "6.3.0",
+    "@lit-protocol/constants": "6.3.0",
+    "@lit-protocol/lit-auth-client": "6.3.0",
+    "@lit-protocol/lit-node-client": "6.3.0",
+    "@lit-protocol/pkp-ethers": "6.3.0",
+    "@lit-protocol/types": "6.3.0",
+    "@lit-protocol/accs-schemas": "^0.0.11",
+    "@simplewebauthn/browser": "^10.0.0",
+    "ethers": "^5",
     "@radix-ui/react-slot": "^1.1.0",
     "@types/next-auth": "^3.15.0",
     "class-variance-authority": "^0.7.0",
@@ -30,6 +37,7 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.6",
     "postcss": "^8",
+    "prettier": "3.3.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
