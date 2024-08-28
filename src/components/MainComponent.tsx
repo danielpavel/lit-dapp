@@ -20,6 +20,8 @@ export function MainComponent() {
   } = useAuthenticate(redirectUri);
   const {
     createAccount,
+    fetchAccounts,
+    accounts,
     currentAccount,
     loading: accountsLoading,
     error: accountsError,
@@ -40,8 +42,7 @@ export function MainComponent() {
     // If user is authenticated, fetch accounts
     if (authMethod) {
       router.replace(window.location.pathname);
-
-      // fetchAccounts(authMethod);
+      fetchAccounts(authMethod);
     }
   }, [authMethod]);
 
@@ -65,7 +66,11 @@ export function MainComponent() {
     // If user is authenticated, create an account
     if (authMethod) {
       router.replace(window.location.pathname);
-      createAccount(authMethod);
+
+      // Create account if user has no accounts
+      if (accounts?.length === 0) {
+        createAccount(authMethod);
+      }
     }
   }, [authMethod, createAccount]);
 
